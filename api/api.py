@@ -5,15 +5,6 @@ import requests
 import json
 from requests.auth import HTTPBasicAuth
 
-# info@wdstp.com
-# TwQ#BRNcFYsOBJ9bS#D6
-
-# username = '9043'
-# password = 'QTNDCKYNWFY7JJKPBEICMFVPH3UX8T0R6PR2A24P06S75375N7PWNJ9L887J1APC'
-
-# 114-9785691-2585842
-# 112-9077806-7317069
-
 
 class SellerActive(CONFIGS['bnm']):
 
