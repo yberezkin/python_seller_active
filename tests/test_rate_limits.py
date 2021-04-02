@@ -1,6 +1,6 @@
 # encoding: utf-8
 import unittest
-from api.endpoints import *
+from api.endpoints import RateLimit
 
 
 class RateLimitsTestCase(unittest.TestCase):
@@ -14,5 +14,3 @@ class RateLimitsTestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-# r = Orders().get_orders()
-
