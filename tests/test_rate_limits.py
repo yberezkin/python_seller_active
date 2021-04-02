@@ -8,7 +8,7 @@ class RateLimitsTestCase(unittest.TestCase):
     def test_rate_limit_status(self):
         resp = RateLimit().rate_limit_status()
         self.assertIsNotNone(resp)
-        self.assertEqual(resp.status_code, 404)
+        self.assertEqual(resp.status_code, 200)
         self.assertIsInstance(resp.json(), dict)
 
 
