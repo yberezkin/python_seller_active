@@ -11,6 +11,5 @@ class Orders(SellerActive):
     """
 
     def get_orders(self, **kwargs):
-        print(self.SELLER_ID, self.API_KEY)
         # params={'SiteOrderID': '111-8818282-8868216'}
         return self._request(path='api/Order', **kwargs)
