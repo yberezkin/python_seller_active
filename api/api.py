@@ -4,7 +4,9 @@ import requests
 import json
 from requests.auth import HTTPBasicAuth
 import os
+import sys
 import configparser
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 
 def load_config(path=None):
