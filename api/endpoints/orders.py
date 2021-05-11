@@ -10,5 +10,7 @@ class Orders(SellerActive):
         PUT /api/Order
     """
 
-    def get_orders(self):
-        return self._request(path='api/Order', params={'SiteOrderID': '111-8818282-8868216'})
+    def get_orders(self, **kwargs):
+        print(self.SELLER_ID, self.API_KEY)
+        # params={'SiteOrderID': '111-8818282-8868216'}
+        return self._request(path='api/Order', **kwargs)

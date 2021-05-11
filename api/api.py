@@ -1,14 +1,29 @@
 # encoding: utf-8
 __version__ = '0.1'
-from api.config import CONFIGS
 import requests
 import json
 from requests.auth import HTTPBasicAuth
+import os
+import configparser
 
 
-class SellerActive(CONFIGS['bnm']):
+def load_config(path=None):
+    if path is None:
+        base_dir = os.path.dirname(__file__)
+        path = os.path.join(base_dir, 'config.ini')
+    _config = configparser.ConfigParser()
+    _config.read(path)
+    return _config
 
-    def __init__(self):
+
+class SellerActive:
+    HOST = 'https://rest.selleractive.com'
+
+    def __init__(self, _config):
+        config = load_config()
+        self.SELLER_ID = config.get(_config, 'SELLER_ID')
+        self.API_KEY = config.get(_config, 'API_KEY')
+
         self.session = requests.Session()
         self.session.auth = HTTPBasicAuth(self.SELLER_ID, self.API_KEY)
         self.session.headers = {
