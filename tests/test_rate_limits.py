@@ -6,7 +6,7 @@ from api.endpoints import RateLimit
 class RateLimitsTestCase(unittest.TestCase):
 
     def test_rate_limit_status(self):
-        resp = RateLimit().rate_limit_status()
+        resp = RateLimit('bnm_config').rate_limit_status()
         self.assertIsNotNone(resp)
         self.assertEqual(resp.status_code, 200)
         self.assertIsInstance(resp.json(), dict)
