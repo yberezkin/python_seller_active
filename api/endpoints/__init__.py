@@ -1,6 +1,9 @@
 # encoding: utf-8
 from .rate_limit import RateLimit
 from .orders import Orders
+from .locations import Locations
+from .inventory import Inventory
+from .bundles import Bundles
 # from .orders.orders import Orders
 # from .product_fees.product_fees import ProductFees
 # from .sellers.sellers import Sellers
@@ -17,5 +20,8 @@ from .orders import Orders
 
 __all__ = [
     "RateLimit",
-    "Orders"
+    "Orders",
+    "Locations",
+    "Inventory",
+    "Bundles",
 ]

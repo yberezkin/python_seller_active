@@ -1,5 +1,7 @@
 # encoding: utf-8
 __version__ = '0.1'
+
+import logging
 import requests
 import json
 from requests.auth import HTTPBasicAuth
@@ -7,6 +9,10 @@ import os
 import sys
 import configparser
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+# # Enable logging
+logger = logging.getLogger(__file__)
+logger.setLevel(logging.DEBUG)
 
 
 def load_config(path=None):
@@ -48,6 +54,7 @@ class SellerActive:
             method, url=f'{self.HOST}/{path}', params=params,
             data=json.dumps(data) if data and method in ('POST', 'PUT') else None,
         )
+        logger.info(resp.content)
         return resp
 
     # def check_for_errors(self, response):
