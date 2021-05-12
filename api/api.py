@@ -1,6 +1,5 @@
 # encoding: utf-8
 __version__ = '0.1'
-
 import logging
 import requests
 import json
@@ -10,7 +9,7 @@ import sys
 import configparser
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-# # Enable logging
+# Enable logging
 logger = logging.getLogger(__file__)
 logger.setLevel(logging.DEBUG)
 
@@ -22,6 +21,7 @@ def load_config(path=None):
     _config = configparser.ConfigParser()
     _config.read(path)
     return _config
+
 
 
 class SellerActive:
