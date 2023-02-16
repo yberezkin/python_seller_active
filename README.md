@@ -10,7 +10,7 @@ for notes on deploying the project on a live system.
 
 ### Installing
 
-![Badge](https://img.shields.io/pypi/v/python_seller_active?style=for-the-badge)(https://pypi.org/project/python-seller-active/)
+[![Badge](https://img.shields.io/pypi/v/python_seller_active?style=for-the-badge)](https://pypi.org/project/python-seller-active/)
 
 
     pip install python_seller_active
