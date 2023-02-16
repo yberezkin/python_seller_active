@@ -1,5 +1,7 @@
 # SELLER-ACTIVE-API Python Wrapper
 
+[![CodeFactor](https://www.codefactor.io/repository/github/yberezkin/python_seller_active/badge)](https://www.codefactor.io/repository/github/yberezkin/python_seller_active)
+
 This project provides a Python wrapper for interacting with the [rest.selleractive.com](https://rest.selleractive.com/) API, allowing developers to easily integrate the API's functionality into their Python applications.
 
 ## Getting Started
