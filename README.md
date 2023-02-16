@@ -10,7 +10,7 @@ for notes on deploying the project on a live system.
 
 ### Installing
 
-[//]: # ([![Badge]&#40;https://img.shields.io/pypi/v/pytho?style=for-the-badge&#41;]&#40;https://pypi.org/project/xsellco-api/&#41;)
+![Badge](https://img.shields.io/pypi/v/python_seller_active?style=for-the-badge)(https://pypi.org/project/python-seller-active/)
 
 
     pip install python_seller_active
