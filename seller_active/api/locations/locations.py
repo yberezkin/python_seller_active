@@ -40,6 +40,23 @@ class Locations(BaseClient):
 
         return self._request("GET", params=params)
 
+    def get_all_locations(self):
+        """
+        Retrieve list of all inventory items
+        """
+        page = 1
+        inventory = []
+        while True:
+            if page >= 1000:
+                break
+            resp = self.get_locations(page=page)
+            inventory.extend(resp.data)
+            if len(resp.data) < 100:
+                break
+            else:
+                page += 1
+        return inventory
+
     def update_location(self, data: Dict):
         """
         Modify an existing inventory location, must specify the location by both

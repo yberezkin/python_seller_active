@@ -40,6 +40,23 @@ class Bundles(BaseClient):
 
         return self._request("GET", params=params)
 
+    def get_all_bundles(self):
+        """
+        Retrieve list of all inventory items
+        """
+        page = 1
+        inventory = []
+        while True:
+            if page >= 1000:
+                break
+            resp = self.get_bundles(page=page)
+            inventory.extend(resp.data)
+            if len(resp.data) < 100:
+                break
+            else:
+                page += 1
+        return inventory
+
     def update_bundle(self, data: Dict):
         """
         Modifies an existing inventory bundle, all SKUs and relationships must exist prior. Quantity and price values
