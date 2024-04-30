@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 class BaseClient:
     SCHEME = "https://"
-    HOST = "rest.selleractive.com"
+    HOST = "legacy.api.channels.cart.com"
     API_VERSION = "api"
     USER_AGENT = f"{__package_name__}-{__version__}"
 
